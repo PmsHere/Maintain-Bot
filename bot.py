@@ -23,32 +23,20 @@ updatesc = os.environ["UPDATES_CHANNEL"]
 supportc = os.environ["SUPPORT_CHAT"]
 
 BOT_TEXT = """
-Hai {} , This Bot Is Under Maintenance.
-
-You Can't Use This Bot Right Now.You Will Get a Message On This Bot's Channel If This Bot Is Ready To Work.
+Hai {} 👋 For this Username Pm @Chiyaan_Dhruv
 """
-
-BOT_BUTTONS = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(text="Channel", url=f"https://telegram.me/{updatesc}"),
-            InlineKeyboardButton(text="Support", url=f"https://telegram.me/{supportc}"),
-        ]
-    ]
-)
 
 
 @Bot.on_message(filters.private)
 async def start(bot, update):
     text = BOT_TEXT.format(update.from_user.mention)
-    reply_markup = BOT_BUTTONS
     await update.reply_text(
-        text=text, disable_web_page_preview=True, reply_markup=reply_markup
+        text=text, disable_web_page_preview=True,
     )
 
 print(
     """
-Bot Started!!! Now Join on @Vkprojects
+Bot Started!!! 
 """
 )
 
