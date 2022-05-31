@@ -23,7 +23,7 @@ updatesc = os.environ["UPDATES_CHANNEL"]
 supportc = os.environ["SUPPORT_CHAT"]
 
 BOT_TEXT = """
-Hai {} 👋 For this Username Pm @Chiyaan_Dhruv
+For this Username Pm @Chiyaan_Dhruv
 """
 
 
