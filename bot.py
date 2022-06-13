@@ -31,18 +31,19 @@ To support my works, please feel free to donate any amount you like.
 
 There are multiple ways to donate:
 👉 UPI 👉 shalualex123@oksbi
-👉 GitHub Sponsors
-👉 Google Pay
-👉 PhonePe
+👉 [GitHub Sponsors](https://github.com/sponsors/PmsHere?o=sd&sc=t)
+👉 [Google Pay](https://telegra.ph/file/f1ccbbf3b89c6c45adee8.jpg)
+👉 PhonePe 👉 shalu.alex@ybl
 
 © Mallu Torent ™
 """
 
 
 @Bot.on_message(filters.private)
-    Send_message=await bot.send_photo(
-    chat_id = update.chat.id, photo="https://telegra.ph/file/6a4c517182269524e6478.jpg", caption=f"Couldn't Find This Movie.Please Try Again Or Search On Our <b><a href='https://t.me/AVA_updates'>Channel</a></b>. \n\nഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺", parse_mode="html",
-    reply_to_message_id=update.message_id
+async def start(bot, update):
+    text = BOT_TEXT.format(update.from_user.mention)
+    await update.reply_text(
+        text=text, disable_web_page_preview=True
     )
 
 print(
