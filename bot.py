@@ -40,10 +40,9 @@ There are multiple ways to donate:
 
 
 @Bot.on_message(filters.private)
-async def start(bot, update):
-    text = BOT_TEXT.format(update.from_user.mention)
-    await update.send_photo(photo="https://telegra.ph/file/f1ccbbf3b89c6c45adee8.jpg", 
-        text=text, disable_web_page_preview=True,
+Send_message=await bot.send_photo(
+    chat_id = update.chat.id, photo="https://telegra.ph/file/6a4c517182269524e6478.jpg", caption=f"Couldn't Find This Movie.Please Try Again Or Search On Our <b><a href='https://t.me/AVA_updates'>Channel</a></b>. \n\nഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺", parse_mode="html",
+    reply_to_message_id=update.message_id
     )
 
 print(
