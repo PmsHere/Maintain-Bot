@@ -41,8 +41,9 @@ There are multiple ways to donate:
 
 @Bot.on_message(filters.private)
 async def start(bot, update):
-    text = BOT_TEXT.format(update.from_user.mention)
-    await update.reply_text(photo="https://telegra.ph/file/f1ccbbf3b89c6c45adee8.jpg", 
+    text = BOT_TEXT.format(update.from_user.mention),
+    photo = photo
+    await update.send_photo(photo="https://telegra.ph/file/f1ccbbf3b89c6c45adee8.jpg", 
         text=text, disable_web_page_preview=True,
     )
 
