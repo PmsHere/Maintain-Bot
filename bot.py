@@ -43,7 +43,7 @@ There are multiple ways to donate:
 async def start(bot, update):
     text = BOT_TEXT.format(update.from_user.mention)
     await update.reply_text(
-        text=text, disable_web_page_preview=True
+        text=text, disable_web_page_preview=False
     )
 
 print(
